@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: warehouse-command-api-test
+  profiles:
+    active: logging,management
+
+# Ensure no external connections are attempted during tests
+springdoc:
+  swagger-ui:
+    enabled: false
+
+server:
+  port: 0
