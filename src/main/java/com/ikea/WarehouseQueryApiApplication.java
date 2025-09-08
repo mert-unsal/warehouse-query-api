@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 public class WarehouseQueryApiApplication {
 
-	static void main(String[] args) {
+	public static void main(String[] args) {
 		SpringApplication.run(WarehouseQueryApiApplication.class, args);
 	}
 

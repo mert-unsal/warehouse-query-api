@@ -1,6 +1,7 @@
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/WarehouseQueryApiApplication.java
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/config/OpenApiConfig.java
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/config/mongo/MongoConfig.java
+/Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/controller/IndexController.java
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/controller/ProductController.java
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/data/document/ArticleDocument.java
 /Users/mertunsal/Workspace/java/ikea/warehouse-query-api/src/main/java/com/ikea/warehouse_query_api/data/document/ProductDocument.java
