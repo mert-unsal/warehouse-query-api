@@ -11,6 +11,6 @@ import java.util.List;
 public interface ArticleRepository extends MongoRepository<ArticleDocument, String> {
 
     @Query("{ '_id': { $in: ?0 } }")
-    public List<ArticleDocument> findByArticleIdList(List<String> articleIdList);
+    List<ArticleDocument> findByArticleIdList(List<String> articleIdList);
 
 }

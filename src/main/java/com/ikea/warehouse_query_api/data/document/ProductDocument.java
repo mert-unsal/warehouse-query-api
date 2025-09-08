@@ -15,7 +15,6 @@ import java.util.List;
 
 @Document(collection = "products")
 @CompoundIndexes({
-    // Index nested array field for efficient lookups by component artId
     @CompoundIndex(name = "idx_products_containArticles_artId", def = "{ 'containArticles.artId': 1 }")
 })
 @Schema(description = "Product definition with required articles")

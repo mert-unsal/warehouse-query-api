@@ -16,7 +16,7 @@ springdoc:
 
 # Server Configuration
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8083}
   servlet:
     context-path: /
 

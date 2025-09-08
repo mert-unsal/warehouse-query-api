@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.Instant;
 
-@Document(collection = "ArticleInventory")
+@Document(collection = "articles")
 @Schema(description = "Inventory item representing a warehouse article")
 public record ArticleDocument(
     @Id

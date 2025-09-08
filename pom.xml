@@ -26,8 +26,7 @@
         <springdoc.version>2.2.0</springdoc.version>
         <opentelemetry.version.internal>2.13.1</opentelemetry.version.internal>
         <logstash-logback-encoder.version>7.4</logstash-logback-encoder.version>
-        <maven.test.skip>true</maven.test.skip>
-        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <maven.test.skip>false</maven.test.skip>
     </properties>
 
     <dependencyManagement>
