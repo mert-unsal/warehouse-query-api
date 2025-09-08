@@ -11,7 +11,7 @@
     <groupId>com.ikea</groupId>
     <artifactId>warehouse-query-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>warehouse-command-api</name>
+    <name>warehouse-query-api</name>
     <description>This is a demo application for IKEA case study</description>
 
     <developers>
@@ -82,6 +82,12 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
+        <!-- Mapstruct        -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.5.Final</version>
+        </dependency>
         <!--    Testing related dependencies    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -94,12 +100,6 @@
             <artifactId>opentelemetry-spring-boot-starter</artifactId>
             <version>${opentelemetry.version.internal}</version>
         </dependency>
-        <!-- OpenTelemetry Kafka instrumentation for trace propagation -->
-        <dependency>
-            <groupId>io.opentelemetry.instrumentation</groupId>
-            <artifactId>opentelemetry-kafka-clients-2.6</artifactId>
-            <version>${opentelemetry.version.internal}-alpha</version>
-        </dependency>
         <!-- Logback MDC instrumentation -->
         <dependency>
             <groupId>io.opentelemetry.instrumentation</groupId>
@@ -111,18 +111,6 @@
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>${logstash-logback-encoder.version}</version>
-        </dependency>
-        <!-- MapStruct for mapping -->
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>${mapstruct.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>${mapstruct.version}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -144,7 +132,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <skipTests>true</skipTests>
+                    <skipTests>false</skipTests>
                     <excludes>
                         <exclude>**/WarehouseMessageConsumerTest.java</exclude>
                     </excludes>
@@ -156,14 +144,21 @@
                 <configuration>
                     <source>21</source>
                     <target>21</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
                     <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.32</version>
+                        </path>
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>${mapstruct.version}</version>
+                            <version>1.6.0.Beta1</version>
                         </path>
                     </annotationProcessorPaths>
+                    <compilerArgs>
+                        <arg>--enable-preview</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>

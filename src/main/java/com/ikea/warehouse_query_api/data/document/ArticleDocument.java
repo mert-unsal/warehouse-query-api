@@ -16,7 +16,7 @@ import java.time.Instant;
 public record ArticleDocument(
     @Id
     @Schema(description = "Unique article identifier", example = "1")
-    ObjectId id,
+    String id,
 
     @Schema(description = "Name of the inventory item", example = "leg")
     @Indexed

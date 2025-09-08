@@ -36,14 +36,6 @@ public class OpenApiConfig {
     }
 
     @Bean
-    public GroupedOpenApi legacy() {
-        return GroupedOpenApi.builder()
-                .group("legacy")
-                .pathsToMatch("/api/commands/**")
-                .build();
-    }
-
-    @Bean
     public GroupedOpenApi v1() {
         return GroupedOpenApi.builder()
                 .group("v1")

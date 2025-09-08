@@ -3,7 +3,7 @@ spring:
   data:
     mongodb:
       # Prefer URI; overrides host/port if provided
-      uri: ${MONGODB_URI:mongodb+srv://mertunsal0_db_user:8rRqh7a8mefQinqH@munsalcluster.gab6lus.mongodb.net/?retryWrites=true&w=majority&appName=munsalCluster}
+      uri: ${MONGODB_URI:mongodb+srv://bnymnyrls_db_user:GMvGHyabysKCW7PC@cluster0.ngrkjxc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0}
       database: ${MONGODB_DATABASE:ikea}
 
 management:
