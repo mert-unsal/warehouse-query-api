@@ -1,6 +1,6 @@
 spring:
   application:
-    name: warehouse-command-api
+    name: warehouse-query-api
   profiles:
     active: logging,management,mongo
 
@@ -28,7 +28,7 @@ info:
     version: '0.0.1-SNAPSHOT'
     encoding: 'UTF-8'
     java:
-      version: '21.0.6'
+      version: '21'
 
 #  exporters set as none, as this is a demo project and we don't want to send any data to any external service
 otel:

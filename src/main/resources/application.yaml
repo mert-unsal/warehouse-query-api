@@ -1,6 +1,6 @@
 spring:
   application:
-    name: warehouse-command-api
+    name: warehouse-query-api
   profiles:
     active: logging,management,mongo
 
