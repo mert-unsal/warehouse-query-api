@@ -23,7 +23,7 @@ public class ProductController {
 
     @GetMapping
     @Operation(summary = "Get all products", description = "Retrieve a list of all products")
-    public List<ProductResponse> getProducts(@RequestParam Integer page, @RequestParam Integer size) {
+    public List<ProductResponse> getProducts(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "10") Integer size) {
         return productService.getAllProducts(page, size).stream().map(productData -> ProductResponse.builder()
                 .id(productData.product().id().toString())
                 .name(productData.product().name())
