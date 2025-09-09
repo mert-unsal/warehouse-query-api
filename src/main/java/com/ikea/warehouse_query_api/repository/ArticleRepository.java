@@ -1,4 +1,4 @@
-package com.ikea.warehouse_query_api.data.repository;
+package com.ikea.warehouse_query_api.repository;
 
 import com.ikea.warehouse_query_api.data.document.ArticleDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;

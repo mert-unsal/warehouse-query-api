@@ -1,7 +1,6 @@
 package com.ikea.warehouse_query_api.data.document;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;

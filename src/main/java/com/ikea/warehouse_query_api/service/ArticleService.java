@@ -1,7 +1,7 @@
 package com.ikea.warehouse_query_api.service;
 
 import com.ikea.warehouse_query_api.data.document.ArticleDocument;
-import com.ikea.warehouse_query_api.data.repository.ArticleRepository;
+import com.ikea.warehouse_query_api.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

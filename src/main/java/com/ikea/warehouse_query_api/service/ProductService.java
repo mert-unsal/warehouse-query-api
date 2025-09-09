@@ -4,11 +4,10 @@ import com.ikea.warehouse_query_api.data.document.ArticleDocument;
 import com.ikea.warehouse_query_api.data.document.ProductDocument;
 import com.ikea.warehouse_query_api.data.dto.ArticleAmount;
 import com.ikea.warehouse_query_api.data.dto.ProductData;
-import com.ikea.warehouse_query_api.data.repository.ProductRepository;
+import com.ikea.warehouse_query_api.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,9 +20,9 @@ public class ProductService {
     private final ArticleService articleService;
 
 
-    public List<ProductData> getAllProducts(Integer page, Integer size) {
+    public List<ProductData> getAllProducts(Pageable pageable) {
 
-        List<ProductDocument> productDocuments = productRepository.findAll(size * page, size);
+        Page<ProductDocument> productDocuments = productRepository.findAll(pageable);
 
         List<String> listOfArtId = productDocuments.stream().map(ProductDocument::containArticles)
                 .flatMap(List::stream)

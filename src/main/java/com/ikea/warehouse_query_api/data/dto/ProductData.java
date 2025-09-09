@@ -4,8 +4,6 @@ import com.ikea.warehouse_query_api.data.document.ProductDocument;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 
-import java.util.List;
-
 @Builder(toBuilder = true)
 @Schema(description = "Product data with product details and available quantity")
 public record ProductData(
